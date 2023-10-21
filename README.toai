@@ -1,0 +1,24 @@
+Overview:
+
+You will create an ec2 instance with Oracle Enterprise linux
+    with kerberos authentication - replace /etc/krb5.conf with your own organization
+    with duo authentication - reppace /etc/duo/pam_duo.conf with your own values
+    You can also install docker, mysql, stunnel, aws cli, vault , shibd, etc ...
+    See userdata.sh for more information
+----------
+Your Tasks:
+   update the vars.tf with your own values based on your AWS environment.
+   Run terraform plan, apply to spawn up the ec2.
+   Don't forget to run terraform destroy.
+
+---------
+NOTEs:
+
+How to find the ImageID of Oracle, Centos, Debian?
+  Search Image by owner:
+      Centos Account owner on AWS is 125523088429
+      Debian Account owner on AWS is 136693071363
+      Oracle Account owner on AWS is 131827586825
+
+Security Watchout!
+   You should never have your credential or your ssh private key stored on the folders.
